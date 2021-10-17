@@ -1,6 +1,3 @@
-sudo: false
-dist: trusty
-
 language: node_js
 node_js:
   - "7"
@@ -17,7 +14,5 @@ jobs:
       script: echo "Deploying to npm ..."
       deploy:
         provider: npm
-        email: "b@chromatin.ca"
         api_key: $NPM_API_KEY
-        gem: travis-build-stages-demo
         on: deploy-npm-release
